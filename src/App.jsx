@@ -11,16 +11,21 @@ class App extends Component {
   };
 
   decrease = () => {
+    if (this.state.count === 0 ) {
+      return;
+    }
     this.setState({ count: this.state.count - 1 });
+    
   };
 
   render() {
     const product = {
       title: "Galbani Mozzarella 125g",
-      img: "https://www.google.be/url?sa=i&url=https%3A%2F%2Fnamanmarket.com%2Fproducts%2Fgalbani-mozzarella-125g&psig=AOvVaw1trwoOCIG3Nkph8l72Nw36&ust=1684921400548000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCNCol76Ti_8CFQAAAAAdAAAAABAS",
+      img: "https://product.hstatic.net/1000282430/product/galbani-mozzarella-cheese-125g_d8e6611b0c134f6c82be236b8e421b96_master.jpg",
       price: "2.99 Eur",
     };
 
+    
     return (
       <>
         <Heading />
@@ -37,7 +42,7 @@ class App extends Component {
         </div>
       </>
     );
-  }
+  }   
 }
 
 export default App;
